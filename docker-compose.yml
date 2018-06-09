@@ -1,0 +1,12 @@
+version: "2"
+services:
+  server:
+    build: ./
+    container_name: server
+    ports:
+      - 8080:80
+    environment:
+      - ENV=dev
+    tty: true
+    volumes:
+      - ./www:/var/www
