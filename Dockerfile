@@ -1,11 +1,11 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 LABEL maintainer="vic@minustime.com"
 
 # Install Apache & PHP
 ENV PHP_VERSION 7.2
+ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update \
-    && DEBIAN_FRONTEND=noninteractive \
     && apt-get install -y --no-install-recommends \
     	ca-certificates \
         apache2 \
